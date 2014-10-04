@@ -262,20 +262,47 @@ assert.throws(
 
 Expects `block` not to throw an error, see `assert.throws` for details.
 
+Example:
+```js
+assert.doesNotThrow(
+  function() {
+    console.log("Nothing to see here");
+  },
+  Error
+);
+```
 
-
-Not particularly useful method.
+Not particularly useful method because its *too vague*.
+Its good to know your method did not throw an error under normal
+circumstances.
 
 
 ### assert.ifError(value)
 
+Tests if value is not a false value, throws if it is a true value.
+Useful when testing the first argument, error in callbacks.
 
+Example:
+```js
+// define a simple function with callback(err, value)
+function sayHello(name, callback) {
+  var error = false;
+  var str   = "Hello "+name;
+  callback(error, str);
+}
+
+// use the function
+sayHello('World', function(err, value){
+  assert.ifError(err);
+  assert.equal(value, "Hello World");
+})
+```
 
 
 ## Try it!
 
-You can't learn coding without *writing* code.
-Open the **assert.js** file and try a few examples.
+As with all code, you can't expect to learn without *trying*.
+Open the **assert.js** file in your editor and try a few examples.
 Remember you won't see any output unless your test *fails*.
 Run it with the command:
 
@@ -292,4 +319,14 @@ http://cjohansen.no/en/node_js/unit_testing_node_js_apps
 
 ## In Practice (The "Real World")
 
-In the "real world" very few people use the node **
+In the "real world" people rarely use the node **assert** module
+by its' self. Instead a **test runner** is used.
+
+Examples of Node.js test runners include:
+
+- Mocha: https://github.com/visionmedia/mocha
+- Tape: https://github.com/substack/tape
+- Lab: https://github.com/hapijs/lab
+
+Each of these has their merits and will be discussed
+in a later chapter on testing.

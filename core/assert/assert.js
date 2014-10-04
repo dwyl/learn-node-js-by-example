@@ -64,3 +64,25 @@ assert.throws(
   },
   "what ever message you like"
 );
+
+
+assert.doesNotThrow(
+  function() {
+    console.log("No errors were thrown");
+  },
+  Error
+);
+
+// confirm the code is not throwing an error:
+
+function sayHello(name, callback) {
+  var error = false;
+  var str   = "Hello "+name;
+  callback(error, str);
+}
+
+// use the function
+sayHello('World', function(err, value){
+  assert.ifError(err);
+  assert.equal(value, "Hello World");
+})
