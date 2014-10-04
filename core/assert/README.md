@@ -239,6 +239,36 @@ var assert = require('assert');
 assert.notStrictEqual(1, true, 'not the same (strictly)');
 ```
 
+### assert.throws(block, [error], [message])
+
+Expects block to throw an error. error can be constructor,
+RegExp or validation function.
+
+The **assert.throws** lets you check for *specific* errors in your functions.
+
+Validate instanceof using constructor:
+
+Example:
+```
+assert.throws(
+  function() {
+    throw new Error("Wrong value");
+  },
+  Error
+);
+```
+
+### assert.doesNotThrow(block, [message])
+
+Expects `block` not to throw an error, see `assert.throws` for details.
+
+
+
+Not particularly useful method.
+
+
+### assert.ifError(value)
+
 
 
 
