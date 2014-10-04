@@ -171,6 +171,76 @@ Again, verbosity/clarity in your tests.
 
 ### assert.deepEqual(actual, expected, [message])
 
+Tests for deep equality.
+
+**assert.deepEqual** is the second of the *useful* methods.
+We use it for comparing two objects (or arrays for equality).
+
+Example:
+```js
+var assert = require('assert');
+
+var list1 = [1, 2, 3, 4, 5];
+var list2 = [1, 2, 3, 4, 5];
+
+assert.deepEqual(list1, list2, 'deepEqual checks the elements in the arrays are identical');
+
+var person1 = { "name":"john", "age":"21" };
+var person2 = { "name":"john", "age":"21" };
+
+// deepEqual checks the elements in the objects are identical
+assert.deepEqual(person1, person2, 'these two objects are the same');
+```
+
+### assert.notDeepEqual(actual, expected, [message])
+
+Tests for any deep inequality.
+Useful when confirming two objects or arrays are not equal.
+
+Example:
+```js
+var assert = require('assert');
+
+var list1 = [1, 2, ,3, 4, 5];
+var list2 = [1, 2, 3, 4, 5];
+
+assert.deepEqual(list1, list2, 'deepEqual checks the elements in the arrays are identical');
+
+var person1 = { "name":"john", "age":"21" };
+var person2 = { "name":"jane", "age":"19" };
+
+// deepEqual checks the elements in the objects are identical
+assert.notDeepEqual(person1, person2, 'these two objects are NOT the same');
+```
+
+### assert.strictEqual(actual, expected, [message])
+
+Tests strict equality, as determined by the strict equality operator ( === )
+
+Similar to **assert.equal** but "strict" (type coersion).
+
+Example:
+```js
+var assert = require('assert');
+
+assert.strictEqual(1, '1', 'not the same'); // this will fail
+```
+
+### assert.notStrictEqual(actual, expected, [message])
+
+Tests strict non-equality, as determined by the strict not equal operator ( `!==` )
+
+The opposite of the strictEqual.
+
+Example:
+```js
+var assert = require('assert');
+
+assert.notStrictEqual(1, true, 'not the same (strictly)');
+```
+
+
+
 
 ## Try it!
 
