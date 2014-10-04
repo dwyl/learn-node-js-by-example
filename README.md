@@ -22,6 +22,7 @@ and puts you in full control.
 Yes! Some of the biggest organisations/companies in the world
 are using Node.js in Production systems:
 
+[Alibaba](https://github.com/alibaba/node-hbase-client),
 [Ajax.org](Ajax.org),
 [Box.com](http://tech.blog.box.com/2014/06/node-js-high-availability-at-box/), British Sky Broadcasting (Sky/Now TV),
 CNN,
@@ -41,6 +42,7 @@ iTV,
 [Joyent](https://www.joyent.com/) (duh!),
 [Klout](https://klout.com),
 LinkedIn,
+McDonalds,
 [Medium](https://medium.com/the-story),
 Mozilla,
 NetFlix,
@@ -56,6 +58,7 @@ Trello,
 Uber,
 Voxer,
 Walmart,
+Wikimedia (in progress of moving to SOA with node!)
 Yahoo,
 Yammer,
 [Yandex](https://www.youtube.com/watch?v=zdCxgdH4wZo),
@@ -114,4 +117,4 @@ Community Modules to Learn:
 
 - [jscs](https://www.npmjs.org/package/jscs) - code style checker
 - [q](https://www.npmjs.org/package/q) - promises library
-- [nd](https://www.npmjs.org/package/nd) - view documention for a module
+- [nd](https://www.npmjs.org/package/nd) - view documentation for a module
