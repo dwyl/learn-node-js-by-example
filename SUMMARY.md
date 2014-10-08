@@ -1,2 +1,3 @@
+* [Introduction](README.md)
 * [Node.js Core](core/README.md)
-  * [Assert](assert/author.md)
+   * [Assert](core/assert/README.md)
