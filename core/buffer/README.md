@@ -37,11 +37,29 @@ allocates that amount of memory to the buffer for later use.
 var buf = new Buffer(10); // <Buffer 10 d6 33 00 01 00 00 00 00 c8>
 var str = buf.toString(); // �3�  (incomprehensible - non-printable chars)
 ```
+Practical use? None. (If I find one I will let you know.)
+
+### new Buffer(array)
+
+*Allocates a new buffer using an array of octets.*
+
+Similar to the **new Buffer(number)** but
+allows you to pass in an array; node creates a placeholder
+for each element in the array in your new Buffer.
+```javascript
+var buf = new Buffer(['hello','world']); // <Buffer 00 00>
+var str = buf.toString(); // empty
+```
 
 Practical use? None.
 
+### new Buffer(str, [encoding])
 
+str String - string to encode.
+encoding String - encoding to use, Optional.
+Allocates a new buffer containing the given str. encoding defaults to 'utf8'.
 
+> Waste of time...
 
 
 - http://nodejs.org/api/buffer.html#buffer_buffer

@@ -10,3 +10,9 @@ var buf = new Buffer(10); // <Buffer 10 d6 33 00 01 00 00 00 00 c8>
 console.log(buf);
 var str = buf.toString(); // �3�
 console.log(str);
+
+
+var buf = new Buffer(['hello','world']); // <Buffer 00 00>
+console.log(buf);
+var str = buf.toString(); // empty
+console.log(str);
