@@ -1,11 +1,3 @@
-# Buffers
-
-Buffers are a series of bytes.
-
-## What does that mean?
-
-If you are completely new to computer programming/science,
-here's a *quick intro* to Bits, Bytes and Octets.
 
 ### Bits
 
@@ -59,25 +51,3 @@ is a positional numeral system with a radix, or base, of 16.
 It uses sixteen distinct symbols, most often the symbols 0–9 to
 represent values zero to nine, and A, B, C, D, E, F
 (or alternatively a–f) to represent values ten to fifteen.
-
-
-## Buffers
-
-Pure JavaScript is *Unicode friendly* but not nice to binary data.
-When dealing with TCP streams or the file system, it's necessary to
-handle [octet streams](http://en.wikipedia.org/wiki/Bitstream).
-Node has several ways of manipulating, creating, and consuming octet streams.
-
-Buffers are used *internally* by Node.js but available to everyone.
-
-Here's a simple example of creating a new **Buffer** containing the
-word "hello". You will notice that the buffer stores the the
-***hexadecimal*** values for the characters.
-
-```javascript
-var buf = new Buffer('hello'); // <Buffer 68 65 6c 6c 6f>
-var str = buf.toString();      // hello
-```
-
-- http://nodejs.org/api/buffer.html#buffer_buffer
-- Ascii to hex to binary conversion table: http://www.ascii-code.com
