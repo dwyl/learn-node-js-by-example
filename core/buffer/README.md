@@ -21,10 +21,6 @@ Here's a simple example of creating a new **Buffer** containing the
 word "hello". You will notice that the buffer stores the the
 ***hexadecimal*** values for the characters.
 
-```javascript
-var buf = new Buffer('hello'); // <Buffer 68 65 6c 6c 6f>
-var str = buf.toString();      // hello
-```
 
 ### new Buffer(size)
 
@@ -55,11 +51,47 @@ Practical use? None.
 
 ### new Buffer(str, [encoding])
 
-str String - string to encode.
-encoding String - encoding to use, Optional.
+- **str** *String* - string to encode.
+- **encoding** *String* - encoding to use, Optional.
+
 Allocates a new buffer containing the given str. encoding defaults to 'utf8'.
 
-> Waste of time...
+```javascript
+var buf = new Buffer('hello'); // <Buffer 68 65 6c 6c 6f>
+var str = buf.toString();      // hello
+```
+
+### Class Method: Buffer.isEncoding(encoding)
+
+- **encoding** *String* The encoding string to test
+
+Returns true if the encoding is a valid encoding argument, or false otherwise.
+
+```javascript
+console.log("Buffer.isEncoding('utf8') >> " + Buffer.isEncoding('utf8') ); // true
+```
+Again, can't see a *practical* application for this.
+
+
+### buf.toJSON()
+
+Returns a JSON-representation of the Buffer instance,
+which is identical to the output for JSON Arrays.
+JSON.stringify implicitly calls this function when
+stringifying a Buffer instance.
+
+
+```javascript
+var buf = new Buffer('test');
+var json = JSON.stringify(buf);
+
+console.log(json); // '[116,101,115,116]'
+
+var copy = new Buffer(JSON.parse(json));
+
+console.log(copy); // <Buffer 74 65 73 74>
+```
+
 
 
 - http://nodejs.org/api/buffer.html#buffer_buffer

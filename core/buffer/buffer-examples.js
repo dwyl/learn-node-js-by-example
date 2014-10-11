@@ -16,3 +16,6 @@ var buf = new Buffer(['hello','world']); // <Buffer 00 00>
 console.log(buf);
 var str = buf.toString(); // empty
 console.log(str);
+
+
+console.log("Buffer.isEncoding('utf8') >> " + Buffer.isEncoding('utf8') ); // true
