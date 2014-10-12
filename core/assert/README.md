@@ -1,4 +1,4 @@
-# Assert lets you Test your Code
+# Assert lets you *test* your code
 
 ## Prerequisites
 
@@ -309,7 +309,6 @@ Run it with the command:
 ```js
 node assert.js
 ```
-
 
 ## Useful Links
 
