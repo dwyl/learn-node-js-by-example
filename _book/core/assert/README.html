@@ -1,0 +1,499 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Assert | Learn Node.js by Example</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.1.1">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="prev" href="../../core/README.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../../gitbook/style.css">
+
+
+        
+    <div class="book" data-level="1.1" data-basepath="../.." data-revision="1413214180090">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         Introduction
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="0.1" data-path="about/README.html">
+            
+                
+                    <a href="../../about/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>0.1.</b>
+                        
+                         About
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="core/README.html">
+            
+                
+                    <a href="../../core/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         Node.js Core
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter active" data-level="1.1" data-path="core/assert/README.html">
+            
+                
+                    <a href="../../core/assert/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                         Assert
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >Learn Node.js by Example</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_4">
+                    
+                        <h1 id="assert-lets-you-test-your-code">Assert lets you <em>test</em> your code</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Node.js installed</li>
+<li>No prior knowledge</li>
+</ul>
+<h2 id="skill-level">Skill Level</h2>
+<ul>
+<li>Basic/Beginner</li>
+</ul>
+<h2 id="what">What?</h2>
+<p><strong><em>Assert</em></strong> - <em>verb</em> - state a fact or belief confidently and forcefully.
+(<a href="https://www.google.com/search?q=assert" target="_blank">dictionary definition</a>)</p>
+<p>When writing code we write <em>tests</em> to <em>automatically</em> check
+our code is working as we <em>expect</em> it to.</p>
+<p>Assert is the most <em>rudimentary</em> way of writing tests.
+It provides no feedback when running your tests <em>unless</em> one fails.</p>
+<p>The assert module has 11 methods but you will only (regularly) use
+a few of them: <strong>assert.equal</strong>, <strong>assert.deepEqual</strong>
+and <strong>assert.throws</strong>. Each are explained <em>with examples</em> below.</p>
+<h3 id="assertfailactual-expected-message-operator">assert.fail(actual, expected, message, operator)</h3>
+<p>The first method (alphabetically), but the least useful for practical.</p>
+<p>Throws an exception that displays the values for actual and expected separated
+by the provided operator.</p>
+<p>Example:</p>
+<pre><code class="lang-js">assert.fail(<span class="hljs-number">21</span>, <span class="hljs-number">42</span>, <span class="hljs-string">'Test Failed'</span>, <span class="hljs-string">'###'</span>)
+</code></pre>
+<p>Output:</p>
+<pre><code class="lang-js">  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> assert.AssertionError({
+        ^
+AssertionError: Faild
+    at <span class="hljs-built_in">Object</span>.&lt;anonymous&gt; (assert.js:<span class="hljs-number">2</span>:<span class="hljs-number">8</span>)
+    at Module._compile (<span class="hljs-built_in">module</span>.js:<span class="hljs-number">456</span>:<span class="hljs-number">26</span>)
+    at <span class="hljs-built_in">Object</span>.Module._extensions..js (<span class="hljs-built_in">module</span>.js:<span class="hljs-number">474</span>:<span class="hljs-number">10</span>)
+    at Module.load (<span class="hljs-built_in">module</span>.js:<span class="hljs-number">356</span>:<span class="hljs-number">32</span>)
+    at <span class="hljs-built_in">Function</span>.Module._load (<span class="hljs-built_in">module</span>.js:<span class="hljs-number">312</span>:<span class="hljs-number">12</span>)
+    at <span class="hljs-built_in">Function</span>.Module.runMain (<span class="hljs-built_in">module</span>.js:<span class="hljs-number">497</span>:<span class="hljs-number">10</span>)
+    at startup (node.js:<span class="hljs-number">119</span>:<span class="hljs-number">16</span>)
+    at node.js:<span class="hljs-number">906</span>:<span class="hljs-number">3</span>
+</code></pre>
+<p>Usefulness: virtually <em>none</em>.
+I haven&#39;t found a <em>practical</em> use for this.
+<a href="http://nodejs.org/api/assert.html#assert_assert_fail_actual_expected_message_operator" target="_blank">http://nodejs.org/api/assert.html#assert_assert_fail_actual_expected_message_operator</a></p>
+<h3 id="assertvalue-message-assertokvalue-message">assert(value, message), assert.ok(value, [message])</h3>
+<p>Tests if value is &quot;truthy&quot;, it is equivalent to
+assert.equal(true, !!value, message);</p>
+<p>The simplest assertion.</p>
+<p>Example:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> assert = <span class="hljs-built_in">require</span>(<span class="hljs-string">'assert'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span> <span class="hljs-params">(a, b)</span> </span>{
+  <span class="hljs-keyword">return</span> a + b;
+}
+
+<span class="hljs-keyword">var</span> expected = add(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);
+assert( expected === <span class="hljs-number">3</span>, <span class="hljs-string">'one plus two is three'</span>);
+</code></pre>
+<p>This will not have any output.
+If you want to see output, you need to make the test <em>fail</em>:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> assert = <span class="hljs-built_in">require</span>(<span class="hljs-string">'assert'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span> <span class="hljs-params">(a, b)</span> </span>{
+  <span class="hljs-keyword">return</span> a + b;
+}
+
+<span class="hljs-keyword">var</span> expected = add(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);
+assert( expected === <span class="hljs-number">4</span>, <span class="hljs-string">'one plus two is three'</span>);
+</code></pre>
+<p>Output:</p>
+<pre><code class="lang-js">assert.js:<span class="hljs-number">92</span>
+  <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> assert.AssertionError({
+        ^
+AssertionError: one plus two is NOT four
+    at <span class="hljs-built_in">Object</span>.&lt;anonymous&gt; (<span class="hljs-regexp">/Users/</span>n/code/node-js-by-example/core/assert/assert.js:<span class="hljs-number">8</span>:<span class="hljs-number">1</span>)
+    at Module._compile (<span class="hljs-built_in">module</span>.js:<span class="hljs-number">456</span>:<span class="hljs-number">26</span>)
+</code></pre>
+<p><code>assert.ok(value, [message])</code> is essentially the same
+as <code>assert(value, message);</code></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> assert = <span class="hljs-built_in">require</span>(<span class="hljs-string">'assert'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span> <span class="hljs-params">(a, b)</span> </span>{
+  <span class="hljs-keyword">return</span> a + b;
+}
+
+<span class="hljs-keyword">var</span> expected = add(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);
+assert.ok( expected === <span class="hljs-number">3</span>, <span class="hljs-string">'one plus two is three'</span>);
+</code></pre>
+<p>Again, no output because the test passes.
+To see some feedback, make the test fail.</p>
+<p><strong>Usefulness</strong>: <strong><em>universal</em></strong>.
+<strong>assert</strong> can be used to test <em>any</em> code.</p>
+<h3 id="assertequalactual-expected-message">assert.equal(actual, expected, [message])</h3>
+<p>Tests shallow, coercive equality with the (double) equal
+comparison operator ( == ).</p>
+<h4 id="why-would-you-use-assertequal-instead-of-assert-">Why would you use assert.equal() instead of assert() ?</h4>
+<p>If you want to make your test clearer use assert.equal
+otherwise there is no benefit to the additional verbosity.</p>
+<p>Example:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> assert = <span class="hljs-built_in">require</span>(<span class="hljs-string">'assert'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span> <span class="hljs-params">(a, b)</span> </span>{
+  <span class="hljs-keyword">return</span> a + b;
+}
+
+<span class="hljs-keyword">var</span> expected = add(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);
+
+<span class="hljs-comment">// these three assertions are equivalent:</span>
+assert(expected == <span class="hljs-number">3</span>, <span class="hljs-string">'one plus two is three'</span>);
+assert.ok(expected == <span class="hljs-number">3</span>, <span class="hljs-string">'one plus two is three'</span>);
+assert.equal(expected, <span class="hljs-number">3</span>, <span class="hljs-string">'one plus two is three'</span>);
+</code></pre>
+<h3 id="assertnotequalactual-expected-message">assert.notEqual(actual, expected, [message])</h3>
+<p>Tests shallow, coercive non-equality with the not equal
+comparison operator ( != ).</p>
+<p>Example:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> assert = <span class="hljs-built_in">require</span>(<span class="hljs-string">'assert'</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span> <span class="hljs-params">(a, b)</span> </span>{
+  <span class="hljs-keyword">return</span> a + b;
+}
+
+<span class="hljs-keyword">var</span> expected = add(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);
+
+<span class="hljs-comment">// these three assertions are equivalent:</span>
+assert(expected != <span class="hljs-number">4</span>, <span class="hljs-string">'one plus two is three'</span>);
+assert.ok(expected != <span class="hljs-number">4</span>, <span class="hljs-string">'one plus two is three'</span>);
+assert.notEqual(expected, <span class="hljs-number">4</span>, <span class="hljs-string">'one plus two is three (NOT Four!)'</span>);
+</code></pre>
+<h4 id="why-would-you-use-assertnotequal1-2-instead-of-assert1--2-">Why would you use assert.notEqual(1, 2) instead of assert(1 != 2) ?</h4>
+<p>Again, verbosity/clarity in your tests.</p>
+<h3 id="assertdeepequalactual-expected-message">assert.deepEqual(actual, expected, [message])</h3>
+<p>Tests for deep equality.</p>
+<p><strong>assert.deepEqual</strong> is the second of the <em>useful</em> methods.
+We use it for comparing two objects (or arrays for equality).</p>
+<p>Example:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> assert = <span class="hljs-built_in">require</span>(<span class="hljs-string">'assert'</span>);
+
+<span class="hljs-keyword">var</span> list1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+<span class="hljs-keyword">var</span> list2 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+
+assert.deepEqual(list1, list2, <span class="hljs-string">'deepEqual checks the elements in the arrays are identical'</span>);
+
+<span class="hljs-keyword">var</span> person1 = { <span class="hljs-string">"name"</span>:<span class="hljs-string">"john"</span>, <span class="hljs-string">"age"</span>:<span class="hljs-string">"21"</span> };
+<span class="hljs-keyword">var</span> person2 = { <span class="hljs-string">"name"</span>:<span class="hljs-string">"john"</span>, <span class="hljs-string">"age"</span>:<span class="hljs-string">"21"</span> };
+
+<span class="hljs-comment">// deepEqual checks the elements in the objects are identical</span>
+assert.deepEqual(person1, person2, <span class="hljs-string">'these two objects are the same'</span>);
+</code></pre>
+<h3 id="assertnotdeepequalactual-expected-message">assert.notDeepEqual(actual, expected, [message])</h3>
+<p>Tests for any deep inequality.
+Useful when confirming two objects or arrays are not equal.</p>
+<p>Example:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> assert = <span class="hljs-built_in">require</span>(<span class="hljs-string">'assert'</span>);
+
+<span class="hljs-keyword">var</span> list1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, ,<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+<span class="hljs-keyword">var</span> list2 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+
+assert.deepEqual(list1, list2, <span class="hljs-string">'deepEqual checks the elements in the arrays are identical'</span>);
+
+<span class="hljs-keyword">var</span> person1 = { <span class="hljs-string">"name"</span>:<span class="hljs-string">"john"</span>, <span class="hljs-string">"age"</span>:<span class="hljs-string">"21"</span> };
+<span class="hljs-keyword">var</span> person2 = { <span class="hljs-string">"name"</span>:<span class="hljs-string">"jane"</span>, <span class="hljs-string">"age"</span>:<span class="hljs-string">"19"</span> };
+
+<span class="hljs-comment">// deepEqual checks the elements in the objects are identical</span>
+assert.notDeepEqual(person1, person2, <span class="hljs-string">'these two objects are NOT the same'</span>);
+</code></pre>
+<h3 id="assertstrictequalactual-expected-message">assert.strictEqual(actual, expected, [message])</h3>
+<p>Tests strict equality, as determined by the strict equality operator ( === )</p>
+<p>Similar to <strong>assert.equal</strong> but &quot;strict&quot; (type coersion).</p>
+<p>Example:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> assert = <span class="hljs-built_in">require</span>(<span class="hljs-string">'assert'</span>);
+
+assert.strictEqual(<span class="hljs-number">1</span>, <span class="hljs-string">'1'</span>, <span class="hljs-string">'not the same'</span>); <span class="hljs-comment">// this will fail</span>
+</code></pre>
+<h3 id="assertnotstrictequalactual-expected-message">assert.notStrictEqual(actual, expected, [message])</h3>
+<p>Tests strict non-equality, as determined by the strict not equal operator ( <code>!==</code> )</p>
+<p>The opposite of the strictEqual.</p>
+<p>Example:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> assert = <span class="hljs-built_in">require</span>(<span class="hljs-string">'assert'</span>);
+
+assert.notStrictEqual(<span class="hljs-number">1</span>, <span class="hljs-literal">true</span>, <span class="hljs-string">'not the same (strictly)'</span>);
+</code></pre>
+<h3 id="assertthrowsblock-error-message">assert.throws(block, [error], [message])</h3>
+<p>Expects block to throw an error. error can be constructor,
+RegExp or validation function.</p>
+<p>The <strong>assert.throws</strong> lets you check for <em>specific</em> errors in your functions.</p>
+<p>Validate instanceof using constructor:</p>
+<p>Example:</p>
+<pre><code>assert.throws(
+  function() {
+    throw new Error(&quot;Wrong value&quot;);
+  },
+  Error
+);
+</code></pre><h3 id="assertdoesnotthrowblock-message">assert.doesNotThrow(block, [message])</h3>
+<p>Expects <code>block</code> not to throw an error, see <code>assert.throws</code> for details.</p>
+<p>Example:</p>
+<pre><code class="lang-js">assert.doesNotThrow(
+  <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Nothing to see here"</span>);
+  },
+  <span class="hljs-built_in">Error</span>
+);
+</code></pre>
+<p>Not particularly useful method because its <em>too vague</em>.
+Its good to know your method did not throw an error under normal
+circumstances.</p>
+<h3 id="assertiferrorvalue">assert.ifError(value)</h3>
+<p>Tests if value is not a false value, throws if it is a true value.
+Useful when testing the first argument, error in callbacks.</p>
+<p>Example:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// define a simple function with callback(err, value)</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sayHello</span><span class="hljs-params">(name, callback)</span> </span>{
+  <span class="hljs-keyword">var</span> error = <span class="hljs-literal">false</span>;
+  <span class="hljs-keyword">var</span> str   = <span class="hljs-string">"Hello "</span>+name;
+  callback(error, str);
+}
+
+<span class="hljs-comment">// use the function</span>
+sayHello(<span class="hljs-string">'World'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(err, value)</span></span>{
+  assert.ifError(err);
+  assert.equal(value, <span class="hljs-string">"Hello World"</span>);
+})
+</code></pre>
+<h2 id="try-it">Try it!</h2>
+<p>As with all code, you can&#39;t expect to learn without <em>trying</em>.
+Open the <strong>assert.js</strong> file in your editor and try a few examples.
+Remember you won&#39;t see any output unless your test <em>fails</em>.
+Run it with the command:</p>
+<pre><code class="lang-js">node assert.js
+</code></pre>
+<h2 id="useful-links">Useful Links</h2>
+<ul>
+<li>Assert API: <a href="http://nodejs.org/api/assert.html" target="_blank">http://nodejs.org/api/assert.html</a></li>
+<li>Chris Johansen&#39;s intro to node testing:
+<a href="http://cjohansen.no/en/node_js/unit_testing_node_js_apps" target="_blank">http://cjohansen.no/en/node_js/unit_testing_node_js_apps</a></li>
+</ul>
+<h2 id="in-practice-the-real-world">In Practice (The &quot;Real World&quot;)</h2>
+<p>In the &quot;real world&quot; people rarely use the node <strong>assert</strong> module
+by its&#39; self. Instead a <strong>test runner</strong> is used.</p>
+<p>Examples of Node.js test runners include:</p>
+<ul>
+<li>Mocha: <a href="https://github.com/visionmedia/mocha" target="_blank">https://github.com/visionmedia/mocha</a></li>
+<li>Tape: <a href="https://github.com/substack/tape" target="_blank">https://github.com/substack/tape</a></li>
+<li>Lab: <a href="https://github.com/hapijs/lab" target="_blank">https://github.com/hapijs/lab</a></li>
+</ul>
+<p>Each of these has their merits and will be discussed
+in a later chapter on testing.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../core/README.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Node.js Core"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
