@@ -57,8 +57,10 @@ http://nodejs.org/api/assert.html#assert_assert_fail_actual_expected_message_ope
 
 ### assert(value, message), assert.ok(value, [message])
 
-Tests if value is "truthy", it is equivalent to
+Tests if value is "truthy", it is equivalent to:
+```js
 assert.equal(true, value, message);
+```
 
 The simplest assertion.
 
