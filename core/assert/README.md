@@ -27,7 +27,8 @@ and **assert.throws**. Each are explained *with examples* below.
 
 ### assert.fail(actual, expected, message, operator)
 
-The first method (alphabetically), but the least useful for practical.
+The first method (alphabetically), but the *least useful* for practical
+purposes (unless you expect a method/test to always fail).
 
 Throws an exception that displays the values for actual and expected separated
 by the provided operator.
@@ -57,7 +58,7 @@ http://nodejs.org/api/assert.html#assert_assert_fail_actual_expected_message_ope
 ### assert(value, message), assert.ok(value, [message])
 
 Tests if value is "truthy", it is equivalent to
-assert.equal(true, !!value, message);
+assert.equal(true, value, message);
 
 The simplest assertion.
 

@@ -1,4 +1,3 @@
-
 ### Bits
 
 A [**bit**](http://en.wikipedia.org/wiki/Bit)
