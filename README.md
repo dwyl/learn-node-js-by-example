@@ -1,5 +1,10 @@
 # Learn Node.js by Example
 
+This *Book* is available *free* online at:
+http://nelsonic.gitbooks.io/node-js-by-example/
+in MOBI (Kindle), PDF (everything) and ePUB (iBooks).
+
+![node intro cartoon](http://3.bp.blogspot.com/-E4-XhVMp5mM/Uw0_WOQWpkI/AAAAAAAAACw/WJn7RX0wJOQ/s1600/not-invented-here.png)
 
 ## Requirements
 
@@ -9,18 +14,28 @@
 
 ## What is Node.js ?
 
-Node.js lets you *easily* build networked software (websites, applications "apps",
+Node.js lets you *easily* build networked software (websites, applications "apps"
 using JavaScript).
 
-Its not "*point-and-click*" like WordPress, SquareSpace or Salesforce;
-you will need to write some "code". But as I will demonstrate, that's
-a *lot* easier than it sounds and gives you more power/flexibility
-and puts you in full control.
+Node.js is not "*point-and-click*" like WordPress, SquareSpace or Salesforce.com;
+you will need to *write* some "code". But as I will demonstrate, that's
+a *lot* easier than it sounds (if you're *new* to writing code),
+gives you more power/flexibility and puts you in full control.
 
-## Node.js is not "Version 1.0" yet can I used it in Production?
+# Frequently Asked Questions (FAQ)
 
-Yes! Some of the biggest organisations/companies in the world
-are using Node.js in Production systems:
+## *Q*: I am *New* to Programming Should I *Start* with Node.js?
+
+If you have *never* written any code of any sort before,
+I recommend you starting with: http://gitbookio.gitbooks.io/javascript/
+You need to have **JavaScript** basics to make the most of Node.js
+
+## *Q*: Node.js is not "Version 1.0" yet can we used it in Production?
+
+***Yes***!  Some of the biggest organisations/companies in the world
+are using Node.js in Production systems.
+
+### A Short List of Companies using Node.js
 
 [Alibaba](https://github.com/alibaba/node-hbase-client),
 [Ajax.org](Ajax.org),
@@ -58,7 +73,7 @@ ThomasCook,
 Trello,
 Uber,
 Voxer,
-Walmart,
+[Walmart](http://www.joyent.com/blog/walmart-node-js-memory-leak),
 Wikimedia (in progress of moving to SOA with node!)
 Yahoo,
 Yammer,
@@ -67,6 +82,8 @@ Yammer,
 
 Want more? See: http://nodejs.org/industry/ and <br />
 https://github.com/joyent/node/wiki/Projects,-Applications,-and-Companies-Using-Node
+
+
 
 
 # Try it!
