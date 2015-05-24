@@ -1,8 +1,10 @@
 # Learn Node.js by Example
+<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
 
-This *Book* is available *free* online at:
+Downloadable versions are available ***free***<sup>1</sup> online at:
 http://nelsonic.gitbooks.io/node-js-by-example/
-in MOBI (Kindle), PDF (everything) and ePUB (iBooks).
+in MOBI (*Kindle*), ePUB (*iBooks*) and PDF (*everything else*).
 
 ![node intro cartoon](http://3.bp.blogspot.com/-E4-XhVMp5mM/Uw0_WOQWpkI/AAAAAAAAACw/WJn7RX0wJOQ/s1600/not-invented-here.png)
 
@@ -136,3 +138,8 @@ Community Modules to Learn:
 - [jscs](https://www.npmjs.org/package/jscs) - code style checker
 - [q](https://www.npmjs.org/package/q) - promises library
 - [nd](https://www.npmjs.org/package/nd) - view documentation for a module
+
+<sup>1</sup> We believe all knowledge/education should be freely available
+to anyone with the desire to learn regardless of their financial means!
+If you find this book and accompanying exercises useful, all we ask is that you
+share your appreciation with others by staring & tweeting! Thanks!
